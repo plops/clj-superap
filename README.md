@@ -6,36 +6,36 @@ https://github.com/alexander-yakushev/events/blob/master/tutorial.md
 so bin ich entwicklung in common lisp gewoehnt.
 
 ich installiere die app mit adb:
-
+```
 adb -d install -r clj-superap.apk
-
+```
 mit
-adb logcat |grep 9999
+```adb logcat |grep 9999```
 sollte man die folgende zeile sehen
-I/neko.tools.repl(15264): Nrepl started at port 9999
+```I/neko.tools.repl(15264): Nrepl started at port 9999```
 
 mit diesem port kann man sich von emacs den cider-mode verbinden.
 
 (fall nicht vorhanden muss der mode in emacs mit M-x package-install cider installiert werden)
 
 den port muss man mit
-
+```
 adb forward tcp:9999  tcp:9999
-
+```
 auf den lokalen rechner umleiten.
 
 
 dann in emacs ausfuehren
-
+```
 M-x cider-connect <enter>
 localhost <enter>
 9999 <enter>
-
+```
 in dem neuen fenster kann man dann code ausfuehren:
-
+```
 user> (+ 1 2)
 3
-
+```
 dann in emacs diese datei aufmachen
 https://github.com/plops/clj-superap/blob/master/src/clojure/eu/aeiounce/clj_superapp/main.clj
 
@@ -80,15 +80,18 @@ boot droid  improvement of  lein-droid for multi target projects
 neko   wrapper for android api, dynamic compilation, repl, cider
        can expand into xml ui declarations
 
-       =  neko.ui/get-screen-orientation landscape
+```
+=  neko.ui/get-screen-orientation landscape
 
 
 (require '[neko.find-view :refer [find-view]])
 (find-view activity ::name)
 ; modify property
 (config (find-view activity ::send) :enabled :false) 
+```
 
 in android you have to remember types for sql access
+```
 neko.data.sqlite :as db
 
 db-schema
@@ -104,8 +107,9 @@ get-db
 
 (db/insert (get-db) :employees {:name "Max Mustermann"})
 
-
-
+;; sending someone on vacation
+(db/update ...
+```
 
 ## License
 
