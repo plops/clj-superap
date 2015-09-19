@@ -132,6 +132,37 @@ neko.dialog.alert
     .show)
 ```
 
+neko simplifies
+activities, action bars, menus, intents, resources, data adapters, notifications
+
+skummet optimizing clojure compiler
+
+most of loading time from initializing vars
+
+unused functions can't be deleted (proguard java treeshaker works with
+output of skummet)
+
+debugging in cider doesn't work yet
+but inspection
+
+demo
+```
+(on-ui neko.notify/toast "Hello world")
+
+(def data (atom ["1" "2" "3"]))
+
+(on-ui (set-content-view! (*a)
+       [:list-view {:adapter (ref-adapter
+       		   (lambda [_]
+		   	   [:text-view])
+		(lamdba [_ view __ elem]
+			(config view :text (str elem)))
+		data)}]))
+
+(swap! data conj "bla")
+
+```
+
 ## License
 
 keine ahnung 
