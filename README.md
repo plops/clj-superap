@@ -63,6 +63,8 @@ jetzt muss ich nur noch rausfinden wie man ein opengl fenster aufmacht.
 
 https://raw.githubusercontent.com/technomancy/leiningen/stable/bin/lein von leiningen.org runterladen, in PATH installieren und dann "lein droid doall" aufrufen
 
+die applikation ist groesstenteil automatisch von lein droid erzeugt wurden. in project.clj habe ich den android sdk pfad und die android platform version setzen muessen.
+
 leider liefert android ein paar programme nur in 32bit versionen aus und ich musste auf die harte weise lernen, dass dieses programm in einem  virtuellen server mit 1GB ram nicht uebersetzt werden kann. genauer gesagt bricht "dx" aus speichermangel ab.
 
 ## License
