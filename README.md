@@ -85,8 +85,27 @@ neko   wrapper for android api, dynamic compilation, repl, cider
 
 (require '[neko.find-view :refer [find-view]])
 (find-view activity ::name)
-
+; modify property
 (config (find-view activity ::send) :enabled :false) 
+
+in android you have to remember types for sql access
+neko.data.sqlite :as db
+
+db-schema
+db/make-schema :tables {:employees {:columns {:_id "int primary key"
+	       	       		   	      :name "text not null" ...
+
+get-db-helper
+(memoize  (fn [] (db/create-helper db-schema)))
+
+
+get-db
+(db/get-database (get-db-helper) :write)
+
+(db/insert (get-db) :employees {:name "Max Mustermann"})
+
+
+
 
 ## License
 
