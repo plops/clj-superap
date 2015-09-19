@@ -161,6 +161,13 @@ demo
 
 (swap! data conj "bla")
 
+(def github-get
+     (memoize (lambda [req]
+     	(json/read-str (slurp (str "https://api.github.com" req))))))
+
+(reset! data (github-get "/orgs/clojure/repos"))
+
+;; nice example how to parse the data and display it
 ```
 
 ## License
