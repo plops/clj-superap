@@ -14,6 +14,14 @@ mit
 sollte man die folgende zeile sehen
 ```I/neko.tools.repl(15264): Nrepl started at port 9999```
 
+es ist uebrigens nicht notwendig das usb kabel verbunden zu lassen.
+mit folgenden befehlen laesst sich der adb service auch ueber wlan uebertragen.
+```
+adb tcpip 5555
+adb connect 192.168.0.105:5555
+```
+auf http://stackoverflow.com/questions/2604727/how-can-i-connect-to-android-with-adb-over-tcp wird das genauer beschrieben.
+
 mit diesem port kann man sich von emacs den cider-mode verbinden.
 
 (fall nicht vorhanden muss der mode in emacs mit M-x package-install cider installiert werden)
