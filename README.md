@@ -109,6 +109,27 @@ get-db
 
 ;; sending someone on vacation
 (db/update ...
+
+
+(db/query-seq ..
+```
+
+shared preferences to preserve data between restarts of app
+
+```
+(defpreferences p "pref_file")
+
+(swap! p assoc :last-user "hans")
+
+;; restart at some point
+(:last-user @p) ;; => joe
+
+```
+neko.dialog.alert
+```
+(-> (alert-dialog-builder {:message "bla"})
+    .create
+    .show)
 ```
 
 ## License
