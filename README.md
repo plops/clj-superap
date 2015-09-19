@@ -73,6 +73,21 @@ Clojure on Android - Alexander Yakushev
 
 https://www.youtube.com/watch?v=mVXTcAEKgF8
 
+lein-droid  compiles the source into apk
+
+boot droid  improvement of  lein-droid for multi target projects
+
+neko   wrapper for android api, dynamic compilation, repl, cider
+       can expand into xml ui declarations
+
+       =  neko.ui/get-screen-orientation landscape
+
+
+(require '[neko.find-view :refer [find-view]])
+(find-view activity ::name)
+
+(config (find-view activity ::send) :enabled :false) 
+
 ## License
 
 keine ahnung 
