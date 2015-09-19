@@ -167,8 +167,11 @@ demo
 
 (reset! data (github-get "/orgs/clojure/repos"))
 
-;; nice example how to parse the data and display it
+;; nice example how to parse the data and display it 
 ```
+
+lein with-profile lean droid doall
+
 
 ## License
 
