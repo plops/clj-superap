@@ -67,6 +67,12 @@ die applikation ist groesstenteil automatisch von lein droid erzeugt wurden. in 
 
 leider liefert android ein paar programme nur in 32bit versionen aus und ich musste auf die harte weise lernen, dass dieses programm in einem  virtuellen server mit 1GB ram nicht uebersetzt werden kann. genauer gesagt bricht "dx" aus speichermangel ab.
 
+## Resources
+
+Clojure on Android - Alexander Yakushev
+
+https://www.youtube.com/watch?v=mVXTcAEKgF8
+
 ## License
 
 keine ahnung 
